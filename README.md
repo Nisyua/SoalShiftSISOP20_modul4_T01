@@ -23,6 +23,14 @@ Repository ini sebagai Laporan Resmi Soal Shift Sisop Modul 4, Praktikum Sistem 
 - Syntax : `./[output] [diretori yang dituju]` -> `./ssfs encv1_`
 
 ### Penjelasan Source Code :
+
+Untuk mendukung pembuatan program mengenai metode enkripsi tersebut, maka kita harus membuat fungsi system call yang bertujuan untuk mengatur 3 (tiga) keperluan tertentu sesuai permintaan soal :
+
+    mkdir : kondisi dimana terjadi pembuatan directory yang telah ditentukan.
+    create : kondisi dimana terjadi proses rename pada directory sesuai dengan nama yang telah ditentukan.
+    write : kondisi dimana terjadi penyimpanan perubahan pada database/log pada file.
+
+Library yang digunakan :
 ```c
 #define FUSE_USE_VERSION 28
 #include <fuse.h>
@@ -569,6 +577,8 @@ void encryptDecrypt(char *path, int method){
 - Saat code sudah dijalankan (Sudah di-Enkripsi), outputnya adalah 
 ![](img/output.png)
 
+## 2. Maaf mas kita tida mengerti dan tida tau jawabnya gimana :") mwaaf mas :(( 
+## 3. nomor 3 juga mas :( 
 
 ## 4. Log System
 ![](img/logsystem.jpg)
@@ -605,6 +615,10 @@ void catatLog(char *lv, char *command, int res, int lenDesc, const char *desc[])
     fclose(file);
 }
 ```
+- Fungsi `static const char *logsys = "/home/fikri/Modul4/fs.txt";` berfungsi untuk menempatkan log file dengan nama fs.txt pada direktori /home/Nisyua/modul4.
+- Fungsi `void catatLog(char *lv, char *command, int res, int lenDesc, const char *desc[]){` akan mengatur format logging yang sesuai dengan ketentuan log file pada soal tersebut antara lain level untuk menunjukkan system call yang terjadi termasuk ke dalam level mana, `cmd` akan menunjukkan system call yang terpanggil, `res` akan menyimpan status dari file tersebut, `lenDesc` akan menunjukkan panjang file path dan `desc[]` akan menunjukkan absolute file path
+- Fungsi `char timeTemp[100];` merupakan sebuah buffer yang berguna untuk menyimpan waktu pemanggilan system call tersebut dengan menggunakan fungsi `strftime(timeTemp, sizeof(timeTemp), "%y%m%d-%H:%M:%S", tm);`
+- Format logging dalam fungsi `catatLog()` akan dituliskan ke dalam log file menggunakan fungsi `sprintf(logTemp, "%s::%s::%s::%d", lv, timeTemp, command, res);`
 - Fungsi `catat log` digunakan untuk mencatat log yang dijalankan.
 ```c
 time_t t;
