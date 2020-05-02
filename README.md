@@ -9,7 +9,7 @@ Repository ini sebagai Laporan Resmi Soal Shift Sisop Modul 4, Praktikum Sistem 
 ![](img/soal1.jpg)
 
 ### Penyelesaian Soal :
-1. Saat membuat direktori dengan awalan nama direktori `encv1_`, maka nama direktori tersebut akan terenkripsi isinya kecuali extensi filenya seperti : .c, .jpg, png, dan lainnya, akan tetap seperti itu (tidak terenkripsi)
+1. Saat membuat direktori dengan awalan nama direktori `encv1_`, maka nama direktori tersebut akan terenkripsi isinya kecuali extensi filenya seperti : **.c, .jpg, png,** dan lainnya, akan tetap seperti itu (tidak terenkripsi)
 2. Saat melakukan *rename* pada direktori dengan awalan `encv1_`, maka direktori tersebut akan menjadi direktori yang terenkripsi
 3. Semua proses baru yang dilakukan seperti `mkdir` dan `rename` prosesnya akan tercatat ke database atau log yang berupa file
 
