@@ -660,3 +660,6 @@ Diatas ini merupakan fungsi `fuse_operations`
 ### ScreenShot
 ![](img/log3.png)
 ![](img/log2.png)
+
+
+![](img/yarab.jpg)
