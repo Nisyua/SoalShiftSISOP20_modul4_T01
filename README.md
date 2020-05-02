@@ -658,4 +658,4 @@ Diatas ini merupakan fungsi `fuse_operations`
 - Diatas merupakan atribut pada `struct` yang merupakan pointer menuju ke fungsi yang digunakan atau dipanggil. Setiap fungsi diatas disebut dengan "**FUSE**" saat suatu kejadian spesifik yang terjadi pada file system.
 
 ### ScreenShot
-![](img/log.png)
+![](img/log2.png)
